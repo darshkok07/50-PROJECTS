@@ -75,6 +75,201 @@
                 document.title	Returns the <title> element	1
                 document.URL	Returns the complete URL of the document
 
+                addEventListener()	Attaches an event handler to the window
+                alert()	Displays an alert box with a message and an OK button
+                atob()	Decodes a base-64 encoded string
+                blur()	Removes focus from the current window
+                btoa()	Encodes a string in base-64
+                clearInterval()	Clears a timer set with setInterval()
+                clearTimeout()	Clears a timer set with setTimeout()
+                close()	Closes the current window
+                confirm()	Displays a dialog box with a message and an OK and a Cancel button
+                focus()	Sets focus to the current window
+                getComputedStyle()	Gets the current computed CSS styles applied to an element
+                getSelection()	Returns a Selection object representing the range of text selected by the user
+                matchMedia()	Returns a MediaQueryList object representing the specified CSS media query string
+                moveBy()	Moves a window relative to its current position
+                moveTo()	Moves a window to the specified position
+                open()	Opens a new browser window
+                print()	Prints the content of the current window
+                prompt()	Displays a dialog box that prompts the visitor for input
+                removeEventListener()	Removes an event handler from the window
+                requestAnimationFrame()	Requests the browser to call a function to update an animation before the next repaint
+                resizeBy()	Resizes the window by the specified pixels
+                resizeTo()	Resizes the window to the specified width and height
+                scroll()	Deprecated.
+                Use scrollTo() instead.
+                scrollBy()	Scrolls the document by the specified number of pixels
+                scrollTo()	Scrolls the document to the specified coordinates
+                setInterval()	Calls a function or evaluates an expression at specified intervals (in milliseconds)
+                setTimeout()	Calls a function or evaluates an expression after a specified number of milliseconds
+            stop()	Stops the window from loading
+
+
+            Anchor property 
+
+            <a name="html">HTML Tutorial</a><br>
+            <a name="css">CSS Tutorial</a><br>
+            <a name="xml">XML Tutorial</a><br>
+
+                                                                            result=  XML Tutorial
+            <p id="demo"></p>
+
+            <script>
+                let content = document.anchors[2].innerHTML;
+                document.getElementById("demo").innerHTML = content;
+            </script>
+
+
+            Event listner 
+
+            document.addEventListener("click", myFunction);
+
+            function myFunction() {
+                 document.getElementById("demo").innerHTML = "Hello World";
+            }
+
+
+
+
+            <button onclick="this.innerHTML='Thank U'">Click Me</button>
+
+            <h2 onclick="changeText(w3)" id="w3" >Click on this text!</h2>
+
+            <script>
+                function changeText(w3) {
+                  w3.innerHTML = "Ooops!";
+                }
+
+
+
+
+                <button  onclick="displayDate()">The time is?</button>
+            <script>
+                function displayDate() {
+                  document.getElementById("demo").innerHTML = Date();
+            }
+            </script>
+            <p id="demo"></p>
+
+
+
+
+
+            <button id="myBtn">Try it</button>
+
+            <p id="demo"></p>
+
+            <script>
+            document.getElementById("myBtn").addEventListener("click", displayDate);
+
+        function displayDate() {
+              document.getElementById("demo").innerHTML = Date();
+        }
+
+
+
+
+
+
+        <button id="myBtn">Try it</button>
+
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("myBtn").onclick = displayDate;
+
+            function displayDate() {
+              document.getElementById("demo").innerHTML = Date();
+            }
+            </script>
+
+
+
+
+
+
+            Enter your name: <input type="text" id="fname" onchange="upperCase()">
+            <p>When you leave the input field, a function transforms the input to upper case.</p>
+            
+            <script>
+            function upperCase() {
+              const x = document.getElementById("fname");
+              x.value = x.value.toUpperCase();
+            }
+            </script>
+
+            
+
+
+            <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+            style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+            Mouse Over Me</div>
+
+        <script>
+            function mOver(obj) {
+                obj.innerHTML = "Thank You"
+        }
+
+            function mOut(obj) {
+                obj.innerHTML = "Mouse Over Me"
+        }
+        </script>
+
+
+
+
+
+        <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+            style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+            Click Me</div>
+
+        <script>
+            function mDown(obj) {
+             obj.style.backgroundColor = "#1ec5e5";
+             obj.innerHTML = "Release Me";
+        }
+
+            function mUp(obj) {
+             obj.style.backgroundColor="#D94A38";
+             obj.innerHTML="Thank You";
+        }
+        </script>
+
+
+
+        <h1 id="id01">My First Page</h1>
+        <p id="id02"></p>
+
+        <script>
+            document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+            ---------------------------------------------------------------------------.firstChild.nodevalue;
+        `</script>
+
+
+
+    
+        <script>
+         const para = document.createElement("p");
+          const node = document.createTextNode("This is new.");
+           para.appendChild(node);
+    
+           const element = document.getElementById("div1");
+           const child = document.getElementById("p1");
+          element.insertBefore(para, child);
+         </script>
+
+
+        <script>
+        const elmnt = document.getElementById("p1"); elmnt.remove();
+        </script>
+        
+
+
+
+
+
+
 
                 String length
 String charAt()   String charCodeAt()      String at()  String [ ]  String slice()  String substring()  String substr() See Also:   String Search Methods   String Templates
@@ -263,7 +458,6 @@ String repeat()     String replace()    String replaceAll() String split()
                     symbol
                 
                     bigint
-
 
 
                     // objectName.property
